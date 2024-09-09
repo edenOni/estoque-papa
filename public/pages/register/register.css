@@ -1,0 +1,19 @@
+body {
+    height: 100vh;
+}
+form {
+    width: 300px;
+}
+input {
+    border: none;
+}
+button {
+    margin-bottom: 10px;
+}
+
+form {
+    width: 300px;
+    border: 5px solid rgb(31, 179, 98);
+    padding: 10px;
+    background: rgb(31, 179, 98);
+}

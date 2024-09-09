@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Estoque da Adega</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <header>
+        <button type="button" class="outline" onclick="logout()">
+            Sair
+        </button>
+        <form><div>
+            <button type="button" class="outline" onclick="register()">Registrar</button>
+        </div>
+    </form>
+    </header>
+    <h1>Adega Papa Fogo</h1>
+    <div class="home-centralize">
+        <ol id="transactions">
+            
+        </ol>
+    </div>
+    <button class="fab fixed bottom right" onclick="newTransaction()">+</button>
+</body>
+
+<link rel="stylesheet" href="../../global.css">
+<link rel="stylesheet" href="home.css">
+
+<script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-firestore-compat.js"></script>
+<script src="../../firebase-init.js"></script>
+<script src="../../auth-guard.js"></script>
+<script src="../../loading.js"></script>
+<script src="home.js"></script>
+</html>

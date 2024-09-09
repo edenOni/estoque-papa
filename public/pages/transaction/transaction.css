@@ -1,0 +1,18 @@
+header {
+    text-align: right;
+}
+header button {
+    width: auto;
+    background-color: aliceblue;
+    border: 7px solid aliceblue;
+    margin-right: 5px;
+}
+
+main {
+    height: 100vh;
+}
+form {
+    width: 300px;
+    border: 10px solid rgb(31, 179, 98);
+background: rgb(31, 179, 98);
+}

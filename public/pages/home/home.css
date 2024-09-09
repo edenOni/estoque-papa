@@ -1,0 +1,71 @@
+body {
+    height: 100vh;
+}
+
+header {
+    text-align: right;
+}
+header button {
+    width: auto;
+    background-color: aliceblue;
+    border: 1px solid aliceblue;
+    margin-right: 5px;
+}
+
+h1 {
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+}
+
+p {
+    font-size: 20px;
+text-align: right;
+}
+
+.home-centralize {
+border: 10px solid rgb(31, 179, 98);
+background: rgb(31, 179, 98);
+display: grid;
+align-items: stretch;
+justify-items: stretch;
+height: 85vh;
+margin-right: 250px;
+margin-left: 250px;
+padding: 0px;
+overflow: hidden;
+overflow-y: scroll;
+}
+
+ol {
+    list-style-type: none;
+    padding: 0; }
+
+li {
+    border-bottom: 3px solid rgb(191, 194, 191);
+    display: block;
+    background: rgb(38, 194, 38);
+    padding-right: 5px;
+    padding-top: 2px;
+}
+
+ol li:hover {
+    opacity: 0.8;
+}
+
+ol li.expense {
+    border-left: 10px solid red;
+}
+ol li.income {
+    border-left: 10px solid rgb(0, 92, 128);
+}
+
+ol li:hover button.danger {
+    display: block;
+}
+
+button.danger {
+    width: auto;
+    float: left;
+    display: none;
+}
