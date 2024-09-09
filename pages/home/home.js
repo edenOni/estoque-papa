@@ -13,7 +13,7 @@ firebase.auth().onAuthStateChanged(user => {
 })
 
 function register() {
-    window.location.href = "pages/register/register.html";
+    window.location.href = "../register/register.html";
 }
 
 function newTransaction() {
