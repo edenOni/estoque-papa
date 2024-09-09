@@ -26,9 +26,9 @@ text-align: right;
 .home-centralize {
 border: 10px solid rgb(31, 179, 98);
 background: rgb(31, 179, 98);
-display: grid;
-align-items: stretch;
-justify-items: stretch;
+display: flex;
+justify-content: center;
+align-items: center;
 height: 85vh;
 margin-right: 250px;
 margin-left: 250px;
