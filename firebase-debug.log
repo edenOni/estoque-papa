@@ -1,0 +1,120 @@
+[debug] [2024-09-09T17:41:00.435Z] ----------------------------------------------------------------------
+[debug] [2024-09-09T17:41:00.440Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Heitor\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2024-09-09T17:41:00.440Z] CLI Version:   13.16.0
+[debug] [2024-09-09T17:41:00.441Z] Platform:      win32
+[debug] [2024-09-09T17:41:00.441Z] Node Version:  v20.17.0
+[debug] [2024-09-09T17:41:00.441Z] Time:          Mon Sep 09 2024 14:41:00 GMT-0300 (Horário Padrão de Brasília)
+[debug] [2024-09-09T17:41:00.442Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-09-09T17:41:00.452Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-09-09T17:41:00.453Z] > authorizing via signed-in user (heitordemelo19@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\Heitor\Desktop\estoque adega
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2024-09-09T17:41:27.785Z] > refreshing access token with scopes: []
+[debug] [2024-09-09T17:41:27.788Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-09-09T17:41:27.789Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-09-09T17:41:28.206Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2024-09-09T17:41:28.206Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-09-09T17:41:28.282Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2024-09-09T17:41:29.288Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2024-09-09T17:41:29.288Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  Using project estoque-da-adega (Estoque-da-adega) 
+[info] 
+=== Hosting Setup
+[debug] [2024-09-09T17:41:31.555Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/estoque-da-adega [none]
+[debug] [2024-09-09T17:41:31.908Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/estoque-da-adega 200
+[debug] [2024-09-09T17:41:31.908Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/estoque-da-adega {"projectId":"estoque-da-adega","projectNumber":"659960919766","displayName":"Estoque-da-adega","name":"projects/estoque-da-adega","resources":{"hostingSite":"estoque-da-adega"},"state":"ACTIVE","etag":"1_aa8a7927-2902-4d11-902c-5a54eb438735"}
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[info] +  Wrote public/404.html 
+[debug] [2024-09-09T17:41:52.257Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/releases.json [none]
+[debug] [2024-09-09T17:41:53.593Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/releases.json 200
+[debug] [2024-09-09T17:41:53.593Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/releases.json {"current":{"version":"10.13.1","browserURL":"https://www.gstatic.com/firebasejs/10.13.1/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/10.13.1/firebase.tgz"},"live":{"version":"10.13","browserURL":"https://www.gstatic.com/firebasejs/live/10.13/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/live/10.13/firebase.tgz"},"components":{"analytics":"https://www.gstatic.com/firebasejs/10.13.1/firebase-analytics.js","app":"https://www.gstatic.com/firebasejs/10.13.1/firebase-app.js","app-check":"https://www.gstatic.com/firebasejs/10.13.1/firebase-app-check.js","auth":"https://www.gstatic.com/firebasejs/10.13.1/firebase-auth.js","auth/cordova":"https://www.gstatic.com/firebasejs/10.13.1/firebase-auth/cordova.js","auth/web-extension":"https://www.gstatic.com/firebasejs/10.13.1/firebase-auth/web-extension.js","functions":"https://www.gstatic.com/firebasejs/10.13.1/firebase-functions.js","firestore":"https://www.gstatic.com/firebasejs/10.13.1/firebase-firestore.js","firestore/lite":"https://www.gstatic.com/firebasejs/10.13.1/firebase-firestore/lite.js","installations":"https://www.gstatic.com/firebasejs/10.13.1/firebase-installations.js","storage":"https://www.gstatic.com/firebasejs/10.13.1/firebase-storage.js","performance":"https://www.gstatic.com/firebasejs/10.13.1/firebase-performance.js","remote-config":"https://www.gstatic.com/firebasejs/10.13.1/firebase-remote-config.js","messaging":"https://www.gstatic.com/firebasejs/10.13.1/firebase-messaging.js","messaging/sw":"https://www.gstatic.com/firebasejs/10.13.1/firebase-messaging/sw.js","database":"https://www.gstatic.com/firebasejs/10.13.1/firebase-database.js","vertexai-preview":"https://www.gstatic.com/firebasejs/10.13.1/firebase-vertexai-preview.js","firestore.memory":"https://www.gstatic.com/firebasejs/10.13.1/firebase-firestore.memory.js"}}
+[info] +  Wrote public/index.html 
+[info] 
+[info] i  Detected a .git folder at C:\Users\Heitor\Desktop\estoque adega 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=814757525&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2024-09-09T17:41:57.201Z] >>> [apiv2][query] POST https://github.com/login/oauth/access_token [none]
+[debug] [2024-09-09T17:41:57.202Z] >>> [apiv2][body] POST https://github.com/login/oauth/access_token [stream]
+[debug] [2024-09-09T17:41:57.619Z] <<< [apiv2][status] POST https://github.com/login/oauth/access_token 200
+[debug] [2024-09-09T17:41:57.619Z] <<< [apiv2][body] POST https://github.com/login/oauth/access_token {"access_token":"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","token_type":"bearer","scope":"read:user,repo"}
+[debug] [2024-09-09T17:41:57.633Z] >>> [apiv2][query] GET https://api.github.com/user [none]
+[debug] [2024-09-09T17:41:58.083Z] <<< [apiv2][status] GET https://api.github.com/user 200
+[debug] [2024-09-09T17:41:58.084Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"edenOni","id":157736939,"node_id":"U_kgDOCWbf6w","avatar_url":"https://avatars.githubusercontent.com/u/157736939?v=4","gravatar_id":"","url":"https://api.github.com/users/edenOni","html_url":"https://github.com/edenOni","followers_url":"https://api.github.com/users/edenOni/followers","following_url":"https://api.github.com/users/edenOni/following{/other_user}","gists_url":"https://api.github.com/users/edenOni/gists{/gist_id}","starred_url":"https://api.github.com/users/edenOni/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/edenOni/subscriptions","organizations_url":"https://api.github.com/users/edenOni/orgs","repos_url":"https://api.github.com/users/edenOni/repos","events_url":"https://api.github.com/users/edenOni/events{/privacy}","received_events_url":"https://api.github.com/users/edenOni/received_events","type":"User","site_admin":false,"name":null,"company":null,"blog":"","location":null,"email":null,"hireable":null,"bio":null,"twitter_username":null,"notification_email":null,"public_repos":9,"public_gists":0,"followers":0,"following":0,"created_at":"2024-01-25T17:53:04Z","updated_at":"2024-08-26T16:39:38Z","private_gists":0,"total_private_repos":0,"owned_private_repos":0,"disk_usage":2632,"collaborators":0,"two_factor_authentication":false,"plan":{"name":"free","space":976562499,"collaborators":0,"private_repos":10000}}
+[info] 
+[info] +  Success! Logged into GitHub as edenOni 
+[info] 
+[debug] [2024-09-09T17:44:05.245Z] >>> [apiv2][query] GET https://api.github.com/repos/gh repo clone edenOni/estoque/actions/secrets/public-key type=owner
+[debug] [2024-09-09T17:44:05.619Z] <<< [apiv2][status] GET https://api.github.com/repos/gh repo clone edenOni/estoque/actions/secrets/public-key 404
+[debug] [2024-09-09T17:44:05.620Z] <<< [apiv2][body] GET https://api.github.com/repos/gh repo clone edenOni/estoque/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/actions/secrets#get-a-repository-public-key","status":"404"}
+[info] 
+[info] 
+[error] !  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 
+[debug] [2024-09-09T17:45:39.949Z] >>> [apiv2][query] GET https://api.github.com/repos/gh repo clone edenOni/estoque/actions/secrets/public-key type=owner
+[debug] [2024-09-09T17:45:40.320Z] <<< [apiv2][status] GET https://api.github.com/repos/gh repo clone edenOni/estoque/actions/secrets/public-key 404
+[debug] [2024-09-09T17:45:40.321Z] <<< [apiv2][body] GET https://api.github.com/repos/gh repo clone edenOni/estoque/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/actions/secrets#get-a-repository-public-key","status":"404"}
+[info] 
+[info] 
+[error] !  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 
+[debug] [2024-09-09T17:45:41.109Z] >>> [apiv2][query] GET https://api.github.com/repos/gh repo clone edenOni/estoque/actions/secrets/public-key type=owner
+[debug] [2024-09-09T17:45:41.372Z] <<< [apiv2][status] GET https://api.github.com/repos/gh repo clone edenOni/estoque/actions/secrets/public-key 404
+[debug] [2024-09-09T17:45:41.373Z] <<< [apiv2][body] GET https://api.github.com/repos/gh repo clone edenOni/estoque/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/actions/secrets#get-a-repository-public-key","status":"404"}
+[info] 
+[info] 
+[error] !  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 
+[debug] [2024-09-09T17:46:11.100Z] >>> [apiv2][query] GET https://api.github.com/repos/gh repo clone edenOni/estoque/actions/secrets/public-key type=owner
+[debug] [2024-09-09T17:46:11.497Z] <<< [apiv2][status] GET https://api.github.com/repos/gh repo clone edenOni/estoque/actions/secrets/public-key 404
+[debug] [2024-09-09T17:46:11.498Z] <<< [apiv2][body] GET https://api.github.com/repos/gh repo clone edenOni/estoque/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/actions/secrets#get-a-repository-public-key","status":"404"}
+[info] 
+[info] 
+[error] !  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 
+[debug] [2024-09-09T17:48:13.481Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2024-09-09T17:48:13.861Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2024-09-09T17:48:13.861Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest","status":"404"}
+[info] 
+[info] 
+[error] !  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 
