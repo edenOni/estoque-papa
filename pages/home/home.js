@@ -66,19 +66,24 @@ function addTransactionsToScreen(transactions) {
         date.innerHTML = formatDate(transaction.date);
         li.appendChild(date);
 
+        const NDS = document.createElement('p');
+        NDS.innerHTML = transaction.NDS;
+        li.appendChild(NDS);
+
         if (transaction.description) {
             const description = document.createElement('p');
             description.innerHTML = transaction.description;
             li.appendChild(description);
         }
 
+        const teste = document.createElement('p');
+        teste.innerHTML = transaction.teste;
+        li.appendChild(teste);
+
         const type = document.createElement('p');
         type.innerHTML = transaction.transactionUnid;
         li.appendChild(type);
 
-        const money = document.createElement('p');
-        money.innerHTML = formatMoney(transaction.money);
-        li.appendChild(money);
 
         orderedList.appendChild(li);
     });
@@ -111,8 +116,4 @@ function removeTransaction(transaction) {
 
 function formatDate(date) {
     return new Date(date).toLocaleDateString('pt-br');
-}
-
-function formatMoney(money) {
-    return `${money.currency} ${money.value.toFixed(2)}`
 }

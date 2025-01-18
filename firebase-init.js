@@ -1,9 +1,10 @@
 const firebaseConfig = {
-    apiKey: "AIzaSyB0lMzZr6pIhVJ4k2XsanbndzWC8KGQk-4",
-    authDomain: "estoque-da-adega.firebaseapp.com",
-    projectId: "estoque-da-adega",
-    storageBucket: "estoque-da-adega.appspot.com",
-    messagingSenderId: "659960919766",
-    appId: "1:659960919766:web:f141f63b7b79e661717b77"
+    apiKey: "AIzaSyDyudImDq91kWBFYKnSdu9-aN3qXd-5NT8",
+    authDomain: "estoque-da-infoserv.firebaseapp.com",
+    projectId: "estoque-da-infoserv",
+    storageBucket: "estoque-da-infoserv.firebaseapp.com",
+    messagingSenderId: "424512054856",
+    appId: "1:424512054856:web:d0134592a9d69c10459a7d"
 };
+
 firebase.initializeApp(firebaseConfig);

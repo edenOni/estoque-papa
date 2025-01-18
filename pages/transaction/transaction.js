@@ -1,3 +1,11 @@
+function logout() {
+    firebase.auth().signOut().then(() => {
+        window.location.href = "../../index.html";
+    }).catch(() => {
+        alert('Erro ao fazer logout');
+    })
+}
+
 if (!isNewTransaction()) {
     const uid = getTransactionUid();
     findTransactionByUid(uid);
@@ -45,8 +53,8 @@ function isNewTransaction() {
         
             form.date().value = transaction.date;
             form.transactionDesc().value = transaction.description;
-            form.currency().value = transaction.money.currency;
-            form.value().value = transaction.money.value;
+            form.transactionNDS().value = transaction.NDS;
+            form.transactionTeste().value = transaction.teste;
             form.unid().value = transaction.transactionUnid;
         }
 
@@ -95,17 +103,22 @@ function saveTransaction() {
 function createTransaction() {
     return {
         type: form.typeExpense().checked ? "expense" : "income",
+        NDS: form.transactionNDS().value,
         date: form.date().value,
         description: form.transactionDesc().value,
-        money: {
-            currency: form.currency().value,
-            value: parseFloat(form.value().value)
-        },
+        teste: form.transactionTeste().value,
         transactionUnid: form.unid().value,
         user: {
             uid: firebase.auth().currentUser.uid
         }
     };
+}
+
+function OnchageNDS() {
+    const transactionNDS = form.transactionNDS().value;
+    form.transactionDescRequiredError().style.display = !transactionNDS ? "block" : "none";
+
+    toggleSaveButtonDisable();
 }
 
 function onChangeDate() {
@@ -122,11 +135,10 @@ function OnchageDesc() {
     toggleSaveButtonDisable();
 }
 
-function onChangeValue() {
-    const value = form.value().value;
-    form.valueRequiredError().style.display = !value ? "block" : "none";
 
-    form.valueLessOrEqualToZeroError().style.display = value <= 0 ? "block" : "none";
+function OnchageTeste() {
+    const transactionTeste = form.transactionTeste().value;
+    form.transactionDescRequiredError().style.display = !transactionTeste ? "block" : "none";
 
     toggleSaveButtonDisable();
 }
@@ -150,8 +162,13 @@ function isFormValid() {
         return false;
     }
 
-    const value = form.value().value;
-    if (!value || value <= 0) {
+    const transactionNDS = form.transactionNDS().value;
+    if (!transactionNDS) {
+        return false;
+    }
+
+    const transactionTeste = form.transactionTeste().value;
+    if (!transactionTeste) {
         return false;
     }
 
@@ -169,15 +186,15 @@ function isFormValid() {
 }
 
 const form = {
-    currency: () => document.getElementById('currency'),
+    transactionNDS: () => document.getElementById('TransactionNDS'),
+    transactionDescRequiredError: () => document.getElementById('Desc-required-error'),
     date: () => document.getElementById('date'),
     dateRequiredError: () => document.getElementById('date-required-error'),
     saveButton: () => document.getElementById('save-button'),
     transactionDesc: () => document.getElementById('Transaction-Desc'),
     transactionDescRequiredError: () => document.getElementById('Desc-required-error'),
-    value: () => document.getElementById('value'),
-    valueRequiredError: () => document.getElementById('value-required-error'),
-    valueLessOrEqualToZeroError: () => document.getElementById('value-less-or-equal-to-zero-error'),
+    transactionTeste: () => document.getElementById('TransactionTeste'),
+    transactionDescRequiredError: () => document.getElementById('Desc-required-error'),
     typeExpense: () => document.getElementById('expense'),
     typeIncome: () => document.getElementById('income'),
     unid: () => document.getElementById('Unid'),

@@ -96,4 +96,4 @@ const form = {
     passwordMinLengthError: () => document.getElementById('password-min-length-error'),
     passwordRequiredError: () => document.getElementById('password-required-error'),
     registerButton: () => document.getElementById('register-button')
- }
+}
